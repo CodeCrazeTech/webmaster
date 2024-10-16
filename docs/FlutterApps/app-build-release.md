@@ -1,9 +1,9 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 ---
 
-
 # App build & release
+
 To build and release your Flutter app, you can follow these general steps:
 
 1. **Preparing for Release:**
@@ -17,6 +17,7 @@ To build and release your Flutter app, you can follow these general steps:
 2. **Building the App:**
 
    - **For Android:**
+
      - Run `flutter build apk` to build the APK file of your app. This command generates the APK file in the `build/app/outputs/flutter-apk` directory.
      - If you want to build a release APK, add the `--release` flag to the command: `flutter build apk --release`.
 
@@ -31,6 +32,7 @@ To build and release your Flutter app, you can follow these general steps:
 4. **Releasing the App:**
 
    - **For Android:**
+
      - If you're releasing your app on the Google Play Store, you need to sign the APK with your app's signing key and then upload it to the Play Console. Follow the [Play Console's instructions to create a new release and upload your APK file.](https://support.google.com/googleplay/android-developer/answer/9859152?hl=en)
      - If you want to distribute your app outside the Play Store, you can share the APK file directly with your users.
 

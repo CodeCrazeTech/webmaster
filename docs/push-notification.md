@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 # Push Notification
 
 - Open the Firebase Console and select your project. Click the Settings icon on the left sidebar and choose Cloud Messaging.

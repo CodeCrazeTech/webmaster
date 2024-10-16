@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Flutter
@@ -7,6 +7,7 @@ sidebar_position: 1
 Flutter App Development Guide
 
 Software Requirements:
+
 - Flutter SDK
   - Download and install from the official Flutter website: [Flutter Official Website](https://flutter.dev/docs/get-started/install)
 - Android Studio

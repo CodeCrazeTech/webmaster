@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 # Firebase configuration
 
 - Open the firebase [console](https://console.firebase.google.com/) and create a new project

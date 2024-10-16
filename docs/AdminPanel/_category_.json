@@ -1,6 +1,6 @@
 {
-  "label": "Mobile Apps",
-  "position": 4,
+  "label": "Admin Panel",
+  "position": 10,
   "link": {
     "type": "generated-index"
   }

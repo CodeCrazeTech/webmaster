@@ -29,6 +29,12 @@ sidebar_position: 11
 
 Frontend should now be running at http://localhost:5173/
 
+## Frontend Customization (Local Machine):
+
+1. Go to `dashboard->src->utils->axios.jsx ` and give your local url for development `API_DOMAIN`
+
+   ![installation process 1](./img/installation-6.png)
+
 ## Running the Backend(Local Machine):
 
 1. **Open this project any IDE (Ex.vscode)**

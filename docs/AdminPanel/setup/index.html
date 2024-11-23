@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">How to run Admin Panel? | Code Craze Tech</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://github.com/webmaster/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://github.com/webmaster/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://github.com/webmaster/docs/AdminPanel/setup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="How to run Admin Panel? | Code Craze Tech"><meta data-rh="true" name="description" content="Prerequisites:"><meta data-rh="true" property="og:description" content="Prerequisites:"><link data-rh="true" rel="icon" href="/webmaster/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/webmaster/docs/AdminPanel/setup"><link data-rh="true" rel="alternate" href="https://github.com/webmaster/docs/AdminPanel/setup" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/webmaster/docs/AdminPanel/setup" hreflang="x-default"><link rel="stylesheet" href="/webmaster/assets/css/styles.61674cc0.css">
-<script src="/webmaster/assets/js/runtime~main.3b8e9598.js" defer="defer"></script>
+<script src="/webmaster/assets/js/runtime~main.9b240450.js" defer="defer"></script>
 <script src="/webmaster/assets/js/main.8c56ac65.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -17,9 +17,12 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="running-the-frontend">Running the Frontend:<a href="#running-the-frontend" class="hash-link" aria-label="Direct link to Running the Frontend:" title="Direct link to Running the Frontend:">​</a></h2>
 <ol>
 <li>
+<p><strong>Open this project any IDE (Ex.vscode)</strong></p>
+</li>
+<li>
 <p><strong>Navigate to project directory:</strong></p>
 <ul>
-<li><code>cd path/to/your/project</code></li>
+<li><code>cd .\dashboard\</code></li>
 </ul>
 </li>
 <li>
@@ -31,25 +34,34 @@
 <li>
 <p><strong>Start the React development server:</strong></p>
 <ul>
-<li><code>npm run start</code></li>
+<li><code>npm run dev</code></li>
 </ul>
+<p><img decoding="async" loading="lazy" alt="installation process" src="/webmaster/assets/images/installation-63138df6314a0ec8c0d86122a6db3f2b.png" width="1920" height="1020" class="img_ev3q"></p>
 </li>
 </ol>
 <p>Frontend should now be running at <a href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">http://localhost:5173/</a></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="running-the-backendlocal-machine">Running the Backend(Local Machine):<a href="#running-the-backendlocal-machine" class="hash-link" aria-label="Direct link to Running the Backend(Local Machine):" title="Direct link to Running the Backend(Local Machine):">​</a></h2>
 <ol>
 <li>
+<p><strong>Open this project any IDE (Ex.vscode)</strong></p>
+</li>
+<li>
 <p><strong>Navigate to project directory:</strong></p>
 <ul>
-<li><code>cd path/to/your/project</code></li>
+<li><code> cd .\server\</code></li>
 </ul>
 </li>
 <li>
-<p><strong>Create a virtual environment and activate it:</strong></p>
+<p><strong>Create a virtual environment and activate it:</strong>
+<strong>For Windows</strong></p>
+<ul>
+<li><code>python -m venv venv</code></li>
+<li><code>venv\Scripts\activate</code></li>
+</ul>
+<p><strong>For Linux</strong></p>
 <ul>
 <li><code>python3 -m venv venv</code></li>
 <li><code>source venv/bin/activate</code></li>
-<li>On Windows use <code>venv\Scripts\activate</code></li>
 </ul>
 </li>
 <li>
@@ -57,40 +69,55 @@
 <ul>
 <li><code>pip install -r requirements.txt</code></li>
 </ul>
+<p><img decoding="async" loading="lazy" alt="backend installation process 1" src="/webmaster/assets/images/installation-1-037599a15e177cd15d8c51996a798959.png" width="1920" height="1020" class="img_ev3q"></p>
 </li>
 <li>
 <p><strong>Run migrations:</strong></p>
 <ul>
 <li><code>python manage.py migrate</code></li>
+<li>For linux <code>python3 manage.py migrate</code></li>
 </ul>
+<p><img decoding="async" loading="lazy" alt="backend installation process db migrations" src="/webmaster/assets/images/installation-2-d314f19c2b89a34f614da72080be020c.png" width="1920" height="1020" class="img_ev3q"></p>
 </li>
 <li>
 <p><strong>Create a superuser (accessing Django admin):</strong></p>
 <ul>
 <li><code>python manage.py createsuperuser</code></li>
+<li>For linux <code>python3 manage.py createsuperuser</code></li>
 </ul>
-</li>
-<li>
-<p><strong>Create a .eVar.env file in Django project root directory.Add the following environment variables to the .env file.</strong></p>
-<ul>
-<li>SECRET_KEY=your-secret-key-here</li>
-<li>DEBUG=True</li>
-<li>ALLOWED_HOSTS=localhost,127.0.0.1</li>
-<li>PROJECT_ID=firebase-project-id</li>
-<li>FCM_BASE_URL=<a href="https://fcm.googleapis.com" target="_blank" rel="noopener noreferrer">https://fcm.googleapis.com</a></li>
-<li>GOOGLE_APPLICATION_CREDENTIALS=service-account.json</li>
-</ul>
-</li>
-<li>
-<p><strong>Place the service-account.json file in the root directory Django project.</strong></p>
+<p><img decoding="async" loading="lazy" alt="backend installation process superuser" src="/webmaster/assets/images/installation-3-4f1314e02b01ae33bbfab220bb944f06.png" width="1920" height="1020" class="img_ev3q"></p>
 </li>
 <li>
 <p><strong>Run the Django development server:</strong></p>
 <ul>
 <li><code>python manage.py runserver</code></li>
+<li>For linux <code>python3 manage.py runserver</code></li>
 </ul>
+<p><img decoding="async" loading="lazy" alt="backend installation process superuser" src="/webmaster/assets/images/installation-4-9c3fd8246ce511600a7d147e549932be.png" width="1920" height="1020" class="img_ev3q"></p>
 </li>
 </ol>
-<p>Your Django backend should now be running at <a href="http://127.0.0.1:8000/" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8000/</a>.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://themeforest.net/user/codecrazetech/docs/AdminPanel/setup.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/webmaster/docs/category/admin-panel"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Admin Panel</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/webmaster/docs/update"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">What&#x27;s new?</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites:</a></li><li><a href="#running-the-frontend" class="table-of-contents__link toc-highlight">Running the Frontend:</a></li><li><a href="#running-the-backendlocal-machine" class="table-of-contents__link toc-highlight">Running the Backend(Local Machine):</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/webmaster/docs/intro">Web Master</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://twitter.com/codecraze" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://themeforest.net/user/codecrazetech" target="_blank" rel="noopener noreferrer" class="footer__link-item">Our Products<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 CodeCraze</div></div></div></footer></div>
+<p>Your Django backend should now be running at <a href="http://127.0.0.1:8000/" target="_blank" rel="noopener noreferrer">http://127.0.0.1:8000/</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="backend-customization-local-machine">Backend Customization (Local Machine):<a href="#backend-customization-local-machine" class="hash-link" aria-label="Direct link to Backend Customization (Local Machine):" title="Direct link to Backend Customization (Local Machine):">​</a></h2>
+<ol>
+<li>
+<p><strong>First download json from firebase than rename json as <code>service-account.json</code></strong></p>
+</li>
+<li>
+<p><strong>Replace project <code>service-account.json</code> with your <code>service-account.json</code></strong></p>
+</li>
+<li>
+<p><strong>Go to your <code>service-account.json</code> and copy <code>project_id</code></strong></p>
+</li>
+<li>
+<p><strong>Than go to <code>server-&gt;.eVar-&gt;.env </code> and replace the <code>project_id</code></strong></p>
+</li>
+<li>
+<p><strong>For development you need to set <code>debug=True</code></strong></p>
+</li>
+<li>
+<p><strong>For host by yourself please replace hostname what you want to</strong></p>
+<p><img decoding="async" loading="lazy" alt="backend customization" src="/webmaster/assets/images/installation-5-0555a9a110538c4803be74020f176ed4.png" width="1920" height="1020" class="img_ev3q"></p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://themeforest.net/user/codecrazetech/docs/AdminPanel/setup.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/webmaster/docs/category/admin-panel"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Admin Panel</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/webmaster/docs/update"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">What&#x27;s new?</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites:</a></li><li><a href="#running-the-frontend" class="table-of-contents__link toc-highlight">Running the Frontend:</a></li><li><a href="#running-the-backendlocal-machine" class="table-of-contents__link toc-highlight">Running the Backend(Local Machine):</a></li><li><a href="#backend-customization-local-machine" class="table-of-contents__link toc-highlight">Backend Customization (Local Machine):</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/webmaster/docs/intro">Web Master</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://twitter.com/codecraze" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://themeforest.net/user/codecrazetech" target="_blank" rel="noopener noreferrer" class="footer__link-item">Our Products<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 CodeCraze</div></div></div></footer></div>
 </body>
 </html>

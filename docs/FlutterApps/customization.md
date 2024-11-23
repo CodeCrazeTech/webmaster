@@ -13,7 +13,7 @@ To change the app's color scheme
 - Goto resources directory.
 - Open app_color.dart then change the color
 
-![Change App Color](./img/change-app-color.jpeg)
+  ![Change App Color](./img/change-app-color.jpeg)
 
 ## Change app Logo
 

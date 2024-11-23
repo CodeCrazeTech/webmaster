@@ -11,57 +11,79 @@ sidebar_position: 11
 
 ## Running the Frontend:
 
-1. **Navigate to project directory:**
+1. **Open this project any IDE (Ex.vscode)**
 
-   - `cd path/to/your/project`
+2. **Navigate to project directory:**
 
-2. **Install dependencies:**
+   - `cd .\dashboard\`
+
+3. **Install dependencies:**
 
    - `npm install`
 
-3. **Start the React development server:**
+4. **Start the React development server:**
 
-   - `npm run start`
+   - `npm run dev`
+
+   ![installation process](./img/installation.png)
 
 Frontend should now be running at http://localhost:5173/
 
 ## Running the Backend(Local Machine):
 
-1. **Navigate to project directory:**
+1. **Open this project any IDE (Ex.vscode)**
 
-   - `cd path/to/your/project`
+2. **Navigate to project directory:**
 
-2. **Create a virtual environment and activate it:**
+   - ` cd .\server\`
+
+3. **Create a virtual environment and activate it:**
+   **For Windows**
+
+   - `python -m venv venv`
+   - `venv\Scripts\activate`
+
+   **For Linux**
 
    - `python3 -m venv venv`
    - `source venv/bin/activate`
-   - On Windows use `venv\Scripts\activate`
 
-3. **Install dependencies:**
+4. **Install dependencies:**
 
    - `pip install -r requirements.txt`
 
-4. **Run migrations:**
+   ![backend installation process 1](./img/installation-1.png)
+
+5. **Run migrations:**
 
    - `python manage.py migrate`
+   - For linux `python3 manage.py migrate`
 
-5. **Create a superuser (accessing Django admin):**
+   ![backend installation process db migrations](./img/installation-2.png)
+
+6. **Create a superuser (accessing Django admin):**
 
    - `python manage.py createsuperuser`
+   - For linux `python3 manage.py createsuperuser`
 
-6. **Create a .eVar\.env file in Django project root directory.Add the following environment variables to the .env file.**
+   ![backend installation process superuser](./img/installation-3.png)
 
-   - SECRET_KEY=your-secret-key-here
-   - DEBUG=True
-   - ALLOWED_HOSTS=localhost,127.0.0.1
-   - PROJECT_ID=firebase-project-id
-   - FCM_BASE_URL=https://fcm.googleapis.com
-   - GOOGLE_APPLICATION_CREDENTIALS=service-account.json
-
-7. **Place the service-account.json file in the root directory Django project.**
-
-8. **Run the Django development server:**
+7. **Run the Django development server:**
 
    - `python manage.py runserver`
+   - For linux `python3 manage.py runserver`
+
+   ![backend installation process superuser](./img/installation-4.png)
 
 Your Django backend should now be running at http://127.0.0.1:8000/.
+
+## Backend Customization (Local Machine):
+
+1. First download json from firebase than rename json as `service-account.json`
+2. Replace project `service-account.json` with your `service-account.json`
+3. Go to your `service-account.json` and copy `project_id`
+4. Than go to `server->.eVar->.env ` and replace the `project_id`
+5. For development you need to set `debug=True`
+6. For host by yourself please replace hostname what you want to
+
+   ![backend customization](./img/installation-5.png)

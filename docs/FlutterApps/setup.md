@@ -54,7 +54,9 @@ By following these steps, you should be able to successfully run your existing F
 To change the package name in a Flutter project follow these steps:
 
 - Open your terminal or command prompt.
-- Past this following command into your terminal.
+- First run this command for activate `rename` plugin
+  `flutter pub global activate rename`
+- Than, run this following command into your terminal.
   ```
   rename setBundleId --targets android,ios --value "com.your.id.com"
   ```
@@ -74,12 +76,12 @@ To change the app name in a Flutter project using the `rename` tool, you would t
 
 ## Change Base URL
 
-To change the value of the `webURL` variable in the `constant.dart` file located in the `lib/resources` directory of your Flutter project, you can follow these steps:
+To change the value of the `baseURL` variable in the `constant.dart` file located in the `lib/core` directory of your Flutter project, you can follow these steps:
 
 - Open your Flutter project in your preferred code editor.
 
-- Navigate to the `constant.dart` file located in the `lib/resources` directory.
+- Navigate to the `constant.dart` file located in the `lib/core` directory.
 
-- Locate the `webURL` variable in the file, and replace by your URL.
+- Locate the `baseURL` variable in the file, and replace by your URL.
 
-![Chnage home page tab url](./img/base_url.png)
+  ![Change home page tab url](./img/base_url.jpeg)

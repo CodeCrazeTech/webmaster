@@ -55,7 +55,9 @@ To change the package name in a Flutter project follow these steps:
 
 - Open your terminal or command prompt.
 - First run this command for activate `rename` plugin
-  `flutter pub global activate rename`
+  ```
+  flutter pub global activate rename
+  ```
 - Than, run this following command into your terminal.
   ```
   rename setBundleId --targets android,ios --value "com.your.id.com"

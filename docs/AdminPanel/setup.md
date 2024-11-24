@@ -88,8 +88,13 @@ Your Django backend should now be running at http://127.0.0.1:8000/.
 1. First download json from firebase than rename json as `service-account.json`
 2. Replace project `service-account.json` with your `service-account.json`
 3. Go to your `service-account.json` and copy `project_id`
-4. Than go to `server->.eVar->.env ` and replace the `project_id`
+4. Then go to `server->.eVar->.env ` and replace the `project_id`
 5. For development you need to set `debug=True`
 6. For host by yourself please replace hostname what you want to
 
    ![backend customization](./img/installation-5.png)
+
+7. Go to `server->core->settings.py`.
+8. Then add you front-end server domain into `CORS_ALLOWED_ORIGINS` and `CSRF_TRUSTED_ORIGINS`
+
+   ![backend customization 1](./img/installation-7.png)
